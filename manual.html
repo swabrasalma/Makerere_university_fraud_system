@@ -1,0 +1,200 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>User Manual</title>
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+	<link rel="stylesheet" type="text/css" href="css/mobile.css">
+	<script src="js/mobile.js" type="text/javascript"></script>
+</head>
+<body>
+	<div id="page">
+		<div id="header">
+			<div>
+				<a href="manual.html" class="selected"><font color="white">User manual</font></a>
+				<ul id="navigation">
+					<li class="selected">
+						<a href="index.php?home=true"><i class='fa fa-home'></i>Home</a>
+					</li>
+					<li class="menu">
+						<a href="blog.html">Data Structures</a>
+						<ul class="primary">
+							<li>
+								<a href="linked_list_view.php">Linked lists</a>
+							</li>
+							<li>
+								<a href="stack_view.php">Stack arrays</a>
+							</li>
+							<li>
+								<a href="queue_view.php">Queue arrays</a>
+							</li>
+							<li>
+								<a href="priority_queue_view.php">Priority Queue</a>
+							</li>
+						</ul>
+					</li>
+					<li class="menu">
+						<a href="sort_algorithms.php">Sorting</a>
+						<ul class="primary">
+							<li>
+								<a href="bubble.php">Bubble Sort</a>
+							</li>
+							<li>
+								<a href="quick.php">Quick Sort</a>
+							</li>
+							<li>
+								<a href="merge.php">Merge Sort</a>
+							</li>
+							<li>
+								<a href="Selection.php">Selection Sort</a>
+							</li>
+							<li>
+								<a href="insertion.php">Insertion Sort</a>
+							</li>
+						</ul></li>
+						<li class="menu">
+						<a href="search.html">Searching</a>
+						<ul class="primary">
+							<li>
+								<a href="linear.php">Linear Search</a>
+							</li>
+							<li>
+								<a href="binary.php">Binary Search</a>
+							</li></ul></li>
+					</li>
+					 <li class ="menu">
+		<a href='recursion.php'> Recursion
+		</a>
+		<ul class="primary">
+               <li><a href="pascal.php">pascal's</a></li>
+            </ul>
+		</li>  
+		<li class ="menu">
+		<a href='comparisons.php'>comparisons page
+		</a>
+		
+		</li>
+				</ul>
+			</div>
+		</div>
+		<div id="body" class="home">
+			<div class="header">
+				<div>
+					<!-- <img src="images/satellite.png" alt="" class="satellite"> -->
+					<h1><center>User Manual</center></h1>
+				</div>
+			</div>
+			<div class="body">
+						<div>
+<p>	<center>
+SCHOOL OF COMPUTING & INFORMATION TECHNOLOGY</br>
+COURSE NAME: DATA STRUCTURES AND ALGORITHMS</br>
+COURSE CODE: CSC 2100</br>
+SEMESTER: 1, YEAR 2</br>
+PROJECT ASSIGNMENT 2: MAKERERE UNIVERSITY FRAUD SYSTEM.</br>
+SED 008, SOFTWARE ENGINEERING</br>
+NAMES REGISTRATION NO.</br>
+1.NAKUYA BRIDGET 15/U/9803/PS</br>
+2.NAMAYANJA SWABRA 15/U/10195/PS</br>
+3.NAKABIITO NULIATE LUBEGA 15/U/9291/PS</br>
+4.MUHEREZA LIBERTY 15/U/8006/PS</br>
+5.MPIRIRWE TABITHA 15/U/7700/PS</br>
+6.OPOLOTI STEVEN 14/U/14203/EVE</br></center>
+<h1>Introduction</h1>
+The Makerere University Fraud System is aimed at decreasing the financial shortfalls in Makerere
+University at large that results from a number of factors including; forgeries of tuition fees payment
+receipts by private students. Thus, as a team, we developed a fraud system that stores the receipt
+numbers for each payment made for each student to help academic registrars keep track of forged
+receipts within the shortest time possible.
+<h1>Implementation:</h1>
+We implemented the system using four programming languages i.e; PHP, JAVASCRIPT, CSS and
+HTML.
+It is assumed that Makerere has 1000 private students each having a unique student number. They
+are assumed to make installment payments of tuition fees in 10 months, thus 10 entries of receipt
+numbers.
+The registrar randomly selects any receipt from the 3 provided by the student, search for the receipt
+in the system, if found, the system returns and he simply looks at left most for the student number to
+confirm what is on the receipt.
+We randomly generated an associative array that stores student numbers and their corresponding
+receipt numbers. Thereafter we sorted the array using the various sort algorithms and compare their
+running times. We also implemented the different data structures on the generated array as
+elaborated in our code.
+<h1>HOW OUR SYSTEM OPERATES:-</h1>
+<strong>1.The interface/ Index/Home page:</strong></br>
+First, any of our users should be able to see and interact with our homepage or what we refer to as
+the index page, where the user can access a navigation bar which provides links to different pages
+from which we implemented the system functionalities I.e Data structures, Sorting, Searching,
+Recursion, and the Comparison page. These elements have drop down menus that are also links to
+other pages.
+The index page also has a blog section where a user can provide feedback to us and other users
+about data structures topics and the fraud system at large. This is through clicking the read more
+button. We have exported our database called blog.sql that stores the posted information from this
+section
+Also part of the index page is a search button that takes you to the search implementation page.
+</br>
+<strong>2. Search Implementation:</strong>
+To implement the search functionality, we generated an associative array that stores both
+student numbers and receipt numbers. We then saved this generated array in a text file so as we
+don't regenerate the array every time the system runs. This is triggered by the generate button. We
+then generated an array from the text file and worked with it to implement the searching. By default
+the search button on the search.php file works using the binary search algorithm and it displays the
+amount of time the algorithm takes to return a given value from the array.
+As part of our implementation is a comparison page(comparisons.php)where we compare
+the performance of the binary search and linear search algorithms by subjecting the generated array
+to both algorithms. Their respective running time and results are also displayed. Therefore we
+recommend that the system uses binary search because it is more faster and more efficient
+especially considering the fact that Makerere university has a large number of students.
+Depending on the binary search algorithm, a registrar can use approximately 3.521 seconds
+to work on 500 students.</br>
+<strong>3.COMPARISON OF THE PERFORMANCE OF SORTING ALGORITHMS:</strong>
+Our system compares the performance of the following algorithms:- bubble sort, Quick sort, Merge
+sort, selection sort and insertion sort. These algorithms are all subjected to the generated array and
+their executing times shown. This is done on individual basis on every sort page I.e bubble.php,
+quick.php, merge.php, selection.php and insertion.php but they are compared generally on the
+comparisons page.</br>
+Screen shot illustrating the comparison page:Screen shot illustrating the Merge sort algorithm sort:-
+From various comparisons that we carried out on the performance of all the above algorithms, we
+concluded that quick sort algorithm is the fastest of all. This is evident in the sample execution times in
+seconds shown below:</br>
+Quick Sort: 0.034674</br>
+Merge sort: 0.073878</br>
+Bubble sort: 0.296191</br>
+Insertion sort: 0.329905</br>
+Selection sort: 0.686942</br>
+For a small sample of data insertion sort algorithm is the best alternative to use as evident from our test
+data.</br>
+<strong>5. DATA STRUCTURES:-</strong>
+From the homepage, in the navigation bar, the data structures element can be accessed by the user.
+It is from this terminal that we implement basic types of data structures on the generated array ie
+stacks, queues, linked lists and priority queues.
+We also carry out basic operations eg delete, insert, search etc that are performed on those
+data structures using our array and in all cases produce output.6.RECURSION
+We also implemented recursion by generating a pascal’s triangle on pascal.php page. Our algorithm
+is recursive in nature and runs in O(n2) . A user inputs the number of levels of the triangle that he
+wants the algorithm to generate and the resultant Pascals triangle is displayed on the interface as
+shown in the screen shot below:On the navigation bar is a link called recursion that takes you to recursion.php were we
+implemented a function that computes the sum of positive integers given a value for n and using
+test data the function is found to work perfectly. A user inputs the number of positive integers(n)
+that whose sum he wants the algorithm to compute and the result the is displayed</br>
+<center>THE END.</center></p></div></div></div></div>
+<div id="footer">
+			<div class="connect">
+				<div>
+					<h1>FOLLOW OUR  MISSIONS ON</h1>
+					<div>
+						<a href="http://freewebsitetemplates.com/go/facebook/" class="facebook">facebook</a>
+						<a href="http://freewebsitetemplates.com/go/twitter/" class="twitter">twitter</a>
+						<a href="http://freewebsitetemplates.com/go/googleplus/" class="googleplus">googleplus</a>
+						<a href="http://pinterest.com/fwtemplates/" class="pinterest">pinterest</a>
+					</div>
+				</div>
+			</div>
+			<div class="footnote">
+				<div>
+					<p>&copy; 2016 GROUP EIGHT | ALL RIGHTS RESERVED</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body></html>

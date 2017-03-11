@@ -1,0 +1,231 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Recursion</title>
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+	<link rel="stylesheet" type="text/css" href="css/mobile.css">
+	<script src="js/mobile.js" type="text/javascript"></script>
+</head>
+<body>
+	<div id="page">
+		<div id="header">
+			<div>
+				<ul id="navigation">
+					<li class="selected">
+						<a href="index.php?home=true"><i class='fa fa-home'></i>Home</a>
+					</li>
+					<li class="menu">
+						<a href="blog.html">Data Structures</a>
+						<ul class="primary">
+							<li>
+								<a href="arrays.php">List arrays</a>
+							</li>
+							<li>
+								<a href="stacks.php">Stack arrays</a>
+							</li>
+							<li>
+								<a href="queues.php">Queue arrays</a>
+							</li>
+						</ul>
+					</li>
+					<li class="menu">
+						<a href="sort_algorithms.php">Sorting</a>
+						<ul class="primary">
+							<li>
+								<a href="bubble.php">Bubble Sort</a>
+							</li>
+							<li>
+								<a href="quick.php">Quick Sort</a>
+							</li>
+							<li>
+								<a href="merge.php">Merge Sort</a>
+							</li>
+							<li>
+								<a href="Selection.php">Selection Sort</a>
+							</li>
+							<li>
+								<a href="insertion.php">Insertion Sort</a>
+							</li>
+						</ul></li>
+						<li class="menu">
+						<a href="search.html">Searching</a>
+						<ul class="primary">
+							<li>
+								<a href="linear.php">Linear Search</a>
+							</li>
+							<li>
+								<a href="binary.php">Binary Search</a>
+							</li></ul></li>
+					</li>
+					 <li class ="menu">
+		<a href='#'> Trees
+		</a>
+		<ul class="primary">
+               <li><a href="#">Binary Trees</a></li>
+               <li><a href="#">General Trees</a></li>
+            </ul>
+		</li> 
+		<li class ="menu">
+		<a href='#'> Heap
+		</a>
+		<ul class="primary">
+               <li><a href="#">Heap</a></li>
+               <li><a href="sort.php?algorithm=heapsort">Heap sort</a></li>
+            </ul>
+		</li> 
+		<li class ="menu">
+		<a href='comparisons.php'>comparisons page
+		</a>
+		
+		</li>
+				</ul>
+			</div>
+		</div>
+	       <div id="body">
+            <div class="header">
+                <div>
+                    <h1>Recursion</h1>
+                    <div class="article">
+                        <ul>
+                           <h4>Definition</h4>
+                           <li>
+<p>The adjective "recursive" originates from the Latin verb "recurrere", which means "to run back". And this is what a recursive definition or a recursive function does: It is "running back" or returning to itself. Most people who have done some mathematics, computer science or read a book about programming will have encountered the factorial, which is defined in mathematical terms as 
+
+n! = n * (n-1)!, if n > 1 and f(1) = 1 
+
+It's used so often as an example for recursion because of its simplicity and clarity. We will come back to it in the following.
+<p>
+<p>Definition of Recursion</p>
+
+<p>Recursion is a method of programming or coding a problem, in which a function calls itself one or more times in its body. Usually, it is returning the return value of this function call. If a function definition satisfies the condition of recursion, we call this function a recursive function.</p>
+
+<p>Termination condition:
+A recursive function has to fulfil an important condition to be used in a program: it has to terminate. A recursive function terminates, if with every recursive call the solution of the problem is downsized and moves towards a base case. A base case is a case, where the problem can be solved without further recursion. A recursion can end up in an infinite loop, if the base case is not met in the calls. </p>
+
+<p>Example: </p>
+
+<p>4! = 4 * 3!</p>
+<p>3! = 3 * 2!</p>
+<p>2! = 2 * 1!</p>
+
+
+<!-- </div> -->
+<!-- </div> -->
+<p>Replacing the calculated values gives us the following expression</p>
+
+<p>4! = 4 * 3 * 2 * 1 </p>
+
+<p>Generally we can say: Recursion in computer science is a method where the solution to a problem is based on solving smaller instances of the same problem. </p> 
+
+<h1>Recursive Functions in Python</h1>
+<p>Now we come to implement the factorial in Python. It's as easy and elegant as the mathematical definition.</p>
+<p>
+def factorial(n):<br>
+    if n == 1:<br>
+        return 1<br>
+    else:<br>
+        return n * factorial(n-1)<br></p>
+<p>We can track how the function works by adding two print() function to the previous function definition:</p>
+<p>def factorial(n):<br>
+    print("factorial has been called with n = " + str(n))<br>
+    if n == 1:<br>
+        return 1<br>
+    else:<br>
+        res = n * factorial(n-1)<br>
+        print("intermediate result for ", n, " * factorial(" ,n-1, "): ",res)<br>
+        return res<br></p>
+<p>
+print(factorial(5))<br>
+This Python script outputs the following results:<br>
+factorial has been called with n = 5<br>
+factorial has been called with n = 4<br>
+factorial has been called with n = 3<br>
+factorial has been called with n = 2<br>
+factorial has been called with n = 1<br>
+intermediate result for  2  * factorial( 1 ):  2<br>
+intermediate result for  3  * factorial( 2 ):  6<br>
+intermediate result for  4  * factorial( 3 ):  24<br>
+intermediate result for  5  * factorial( 4 ):  120<br>
+120<br></p><p>
+Let's have a look at an iterative version of the factorial function.
+def iterative_factorial(n):
+    result = 1
+    for i in range(2,n+1):
+        result *= i
+    return result
+</p></li>
+                        </ul>
+                    </div>
+                    <div class="sidebar">
+                        <ul>
+                            <li>
+<!-- <h4>                               
+The Pitfalls of Recursion</h4>
+<p>
+Fibonacci Squares This subchapter of our tutorial on recursion deals with the Fibonacci numbers. What do have sunflowers, the Golden ratio, fir tree cones, The Da Vinci Code, the song "Lateralus" by Tool, and the graphic on the right side in common. Right, the Fibonacci numbers. </p>
+<p>
+The Fibonacci numbers are the numbers of the following sequence of integer values: </p>
+<p>
+0,1,1,2,3,5,8,13,21,34,55,89, ... </p>
+<p>
+The Fibonacci numbers are defined by: 
+Fn = Fn-1 + Fn-2 
+with F0 = 0 and F1 = 1</p> 
+<p>
+The Fibonacci sequence is named after the mathematician Leonardo of Pisa, who is better known as Fibonacci. In his book "Liber Abaci" (publishes 1202) he introduced the sequence as an exercise dealing with bunnies. His sequence of the Fibonacci numbers begins with F1 = 1, while in modern mathematics the sequence starts with F0 = 0. But this has no effect on the other members of the sequence. </p>
+<p>
+The Fibonacci numbers are the result of an artificial rabbit population, satisfying the following conditions: 
+a newly born pair of rabbits, one male, one female, build the initial population
+these rabbits are able to mate at the age of one month so that at the end of its second month a female can bring forth another pair of rabbits
+these rabbits are immortal
+a mating pair always produces one new pair (one male, one female) every month from the second month onwards
+The Fibonacci numbers are the numbers of rabbit pairs after n months, i.e. after 10 months we will have F10 rabits. </p>
+<p>
+The Fibonacci numbers are easy to write as a Python function. It's more or less a one to one mapping from the mathematical definition:</p><p>
+def fib(n):
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        return fib(n-1) + fib(n-2)</p><p>
+An iterative solution is also easy to write, though the recursive solution looks more like the definition:
+def fibi(n):
+    old, new = 0, 1
+    if n == 0:
+        return 0
+    for i in range(n-1):
+        old, new = new, old + new
+    return new
+</p> -->
+                <a href="singlepost.html"><img src="images/satellite-dish.jpg" alt="pic"></a></li>
+            <li><a href="singlepost.html"><img src="images/satellite-dish.jpg" alt=""></a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <div class="connect">
+                <div>
+                    <h1>FOLLOW OUR  MISSIONS ON</h1>
+                    <div>
+                        <a href="http://freewebsitetemplates.com/go/facebook/" class="facebook">facebook</a>
+                        <a href="http://freewebsitetemplates.com/go/twitter/" class="twitter">twitter</a>
+                        <a href="http://freewebsitetemplates.com/go/googleplus/" class="googleplus">googleplus</a>
+                        <a href="http://pinterest.com/fwtemplates/" class="pinterest">pinterest</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footnote">
+                <div>
+					<p>&copy; 2016 GROUP EIGHT | ALL RIGHTS RESERVED</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
